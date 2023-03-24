@@ -137,7 +137,7 @@ int main()
 	
 	if(comparacao ==0)
 	{
-	
+	    system("cls");
 	    for(laco=1;laco=1;)// para repetir o código
 	    {
             system ("cls");//responsável por limpar a tela
@@ -189,4 +189,5 @@ int main()
 	}
 	else 
 	    printf("Senha incorreta");
+	    return 0;
 }
