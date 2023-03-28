@@ -76,6 +76,7 @@ int consulta()
 	if(file == NULL)//comparando para saber se o arquivo existe
 	{
 		printf("Não foi possivel abrir o arquivo, não localizado!. \n");
+		system("pause");
 	}
 	
 	while(fgets(conteudo, 200, file) != NULL)//enquanto procura  e se for diferente de nulo
@@ -105,8 +106,11 @@ int deletar()
 		printf("O usuário não se encontra no sistema!. \n\n");
 		system("pause");
 	}
-	else//companheiro do if...
-
+	else(file == NULL);//companheiro do if... caso não seja um, é o outro
+    {
+    	printf("Usuário deletado com sucesso! \n\n");
+    	system("pause");
+	}
 	{
 
 		printf("Usuário deletado com sucesso!\n\n");
@@ -131,14 +135,14 @@ int main()
 	
 	printf("### Cartório da EBAC ##\n\n");
 	printf("Login de Administrador:\n\nDigite a senha:");
-	scanf("%s",senhadigitada);
+	scanf("%s",senhadigitada);//salvando o comando que o usuario digitou
 	
-	comparacao = strcmp(senhadigitada,"admin");
+	comparacao = strcmp(senhadigitada,"admin");//comparando o que o usuario digitou
 	
 	if(comparacao ==0)
 	{
 	    system("cls");
-	    for(laco=1;laco=1;)// para repetir o código
+	    for(laco=1;laco=1;)// para repetir o código/continuar na mesma tela
 	    {
             system ("cls");//responsável por limpar a tela
         
@@ -154,7 +158,7 @@ int main()
 	
     	    scanf("%d", &opcao); //armazenando a escolha do usuário 
 	
-        	system("cls");
+        	system("cls");//limpezad da tela
     	
     	
       	switch(opcao)//início da seleção
@@ -188,6 +192,7 @@ int main()
        }
 	}
 	else 
-	    printf("Senha incorreta");
+	    printf("Senha incorreta\n\n");
+	    system("pause");
 	    return 0;
 }
